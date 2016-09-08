@@ -1,7 +1,7 @@
 # nix-build -E 'with import ../nixpkgs {}; callPackage ./default.nix { }'
 # compile with nixpkgs in revision 7c71a897dd0c641e047d6e713dca85764b577c4e aka '16.09-beta'
 
-{pkgs, ...}:
+{ pkgs ? (import <nixpkgs> {}), ...}:
 
 with pkgs;
 let
